@@ -1,4 +1,5 @@
-var checkInvalidInput = false;
+var checkInvalidCredit;
+var checkInvalidGrade;
 
 function addRow( ) {
     var cell1, cell2, cell3, cid, gid, id, newRow;
@@ -20,6 +21,7 @@ function addRow( ) {
 }
 
 function calculateGPA( ) {
+    checkInvalidCredit = false;
     var cummulative = 0.00;
     var i = 0;
     var nums = [];
@@ -38,12 +40,12 @@ function calculateGPA( ) {
         else
         {
          alert ("Invalid input for course "+(i+1)+" credit.");
-         document.getElementById( "results" ).innerHTML = "<td> Error: Invalid input </td>";
-         checkInvalidInput = true;
+         document.getElementById( "results" ).innerHTML = "<td> Error: Invalid credit input </td>";
+         checkInvalidCredit = true;
         }
     }
 
-    if ( checkInvalidInput === false ) {
+    if ( checkInvalidCredit === false && checkInvalidGrade === false ) {
         cummulative = ( totalPoints / totalCredits );
     document.getElementById( "results" ).innerHTML = "<td>Total Credits: " + totalCredits + "</td>"
                                                         + "<td>New GPA: " + cummulative.toPrecision( 3 ) + "</td>";
@@ -52,7 +54,7 @@ function calculateGPA( ) {
 
 function deleteRow( ) {
     var length = document.getElementById( "theTable" ).rows.length;
-    var index = length - 2
+    var index = length - 2;
 
     if (length > 7) {
         document.getElementById( "theTable" ).deleteRow( index );
@@ -60,6 +62,7 @@ function deleteRow( ) {
 }
 
 function getGrades( nums, rows ) {
+    checkInvalidGrade = false;
     var letters = [];
 
     for (i = 0; i < rows; ++i) {
@@ -123,8 +126,8 @@ function getGrades( nums, rows ) {
 
         else {
             alert("Invalid input for course " + (i + 1) + " grade.");
-            document.getElementById( "results" ).innerHTML = "<td> Error: Invalid input </td>";
-            checkInvalidInput = true;
+            document.getElementById( "results" ).innerHTML = "<td> Error: Invalid grade input </td>";
+            checkInvalidGrade = true;
         }
     }
 }
