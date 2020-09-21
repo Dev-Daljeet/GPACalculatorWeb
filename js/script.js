@@ -1,7 +1,7 @@
 var checkInvalidCredit;
 var checkInvalidGrade;
 
-function addRow( ) {
+function addCourse( ) {
     var cell1, cell2, cell3, cid, gid, id, newRow;
     var rows = document.getElementById( "theTable" ).rows.length;
     var table = document.getElementById( "theTable" );
@@ -16,8 +16,8 @@ function addRow( ) {
     gid = "g" + id;
 
     cell1.innerHTML = "Course #" + id + ":";
-    cell2.innerHTML = "<input type=\"number\" id=" + cid + " value=\"1\" min=\"1\">";
-    cell3.innerHTML = "<input type=\"text\" id=" + gid + " value=\"A\">";
+    cell2.innerHTML = "<input type=\"number\" id=" + cid + " min=\"0\" placeholder=\"Enter your credit\">";
+    cell3.innerHTML = "<input type=\"text\" id=" + gid + " placeholder=\"Enter your grade\">";
 }
 
 function calculateGPA( ) {
@@ -29,10 +29,17 @@ function calculateGPA( ) {
     var totalCredits = Number(document.getElementById( "credits" ).value);
     var totalPoints = Number(document.getElementById( "gpa" ).value) * totalCredits;
 
+    if(totalCredits < 0 || totalPoints < 0)
+    {
+    alert ("Invalid input for Cumulative GPA or credits.");
+    document.getElementById( "results" ).innerHTML = "<td> Error: Invalid input </td>";
+    checkInvalidCredit = true;
+    }
+
     getGrades( nums, rows );
 
     for ( i = 0; i < rows; ++i ) {
-        if( Number( document.getElementById( "c" + ( i + 1 ) ).value ) > 0)
+        if( Number( document.getElementById( "c" + ( i + 1 ) ).value ) >= 0 )
         {
         totalCredits += Number( document.getElementById( "c" + ( i + 1 ) ).value );
         totalPoints += document.getElementById( "c" + ( i + 1 ) ).value * nums[i];
@@ -52,7 +59,7 @@ function calculateGPA( ) {
      }
 }
 
-function deleteRow( ) {
+function deleteCourse( ) {
     var length = document.getElementById( "theTable" ).rows.length;
     var index = length - 2;
 
@@ -68,11 +75,7 @@ function getGrades( nums, rows ) {
     for (i = 0; i < rows; ++i) {
         letters.push(document.getElementById( "g" + ( i + 1 ) ).value);
 
-        if ( Number( letters[i] ) > -1 && Number( letters[i] < 5 ) ) {
-            nums.push( Number( letters[i] ) );
-        }
-
-        else if ( letters[i].toUpperCase() == "A+" ) {
+        if ( letters[i].toUpperCase() == "A+" ) {
             nums.push( 4.33 );
         }
 

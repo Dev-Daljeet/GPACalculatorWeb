@@ -1,4 +1,4 @@
-body { font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif}
+body { font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; }
 
 h1 { text-align: center; color: #0814fc; margin-left:30px;}
 
@@ -11,4 +11,11 @@ td { font-weight: bold;
      border-collapse: collapse;
      padding: 5px; }
 
-.btn {background-color:red; color:white;}
+.btnNormal { background-color:ghostwhite; color:;}
+
+.btnReset { background-color:red; color:white;}
+
+.btnCalc { background-color:green; color:white;}
+
+#instructions { border: 3px double brown; width:900px; background-color:#ffcb9c; margin-left:330px;
+                font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;}

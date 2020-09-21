@@ -6,31 +6,50 @@
 </head>
 
         <body>
+
             <table class="center" id="theTable">
 
                 <tr><th></th><td colspan="2" align = "center"><h1>GPA CALCULATOR</h1></td></tr>
 
                 <tr>
                 <th></th>
-                <td>Cummulative GPA: <input type="number" id="gpa" value="0.00" min="0"></td>
+                <td>Cumulative GPA: <input type="number" id="gpa" value="0.00" min="0"></td>
                 <td>Credits taken so far: <input type="number" id="credits" value="0" min="0"></td>
             </tr>
             
             <tr><th></th><td>Credits</td><td>Grade</td></tr>
             
-            <tr><td>Course #1:</td> <td><input type="number" id="c1" value="1" min="1"></td> <td><input type="text" id="g1" value="A"></td>
-            <tr><td>Course #2:</td> <td><input type="number" id="c2" value="1" min="1"></td> <td><input type="text" id="g2" value="A"></td>
-            <tr><td>Course #3:</td> <td><input type="number" id="c3" value="1" min="1"></td> <td><input type="text" id="g3" value="A"></td>
+            <tr><td>Course #1:</td> <td><input type="number" id="c1" min="0" placeholder="Enter your credit"></td> <td><input type="text" id="g1" placeholder="Enter your grade"></td>
+            <tr><td>Course #2:</td> <td><input type="number" id="c2" min="0" placeholder="Enter your credit"></td> <td><input type="text" id="g2" placeholder="Enter your grade"></td>
+            <tr><td>Course #3:</td> <td><input type="number" id="c3" min="0" placeholder="Enter your credit"></td> <td><input type="text" id="g3" placeholder="Enter your grade"></td>
             
             <tr align="center"><th></th><td colspan="2">
-                <button onclick="addRow()" class="btn">Add Row</button>
-                &nbsp;<button onclick="deleteRow()" class="btn">Remove Row</button>
-                &nbsp;<button onclick="reset()" class="btn">Reset Fields</button>
-                <br><br><button onclick="calculateGPA()" class="btn">Calculate</button></td></tr>
+                <button onclick="addCourse()" class="btnNormal">Add Course</button>
+                &nbsp;<button onclick="deleteCourse()" class="btnNormal">Remove Course</button>
+                &nbsp;<button onclick="reset()" class="btnReset">Reset Fields</button>
+                <br><br><button onclick="calculateGPA()" class="btnCalc">Calculate</button></td></tr>
 
             </table>
 
             <table class="center" id="results"></table>
+
+            <div>
+                <pre id="instructions">
+                    <b>How to calculate GPA:</b>
+                    1. Enter the credit weight and grade of your course in course # section.
+                    (<b>Optional</b>: Enter cumulative GPA and credits taken so far if necessary.)
+                    2. After entering all courses, click on <b>'Calculate'</b> button to calculate the GPA.
+                       The result will be displayed below the course table.
+
+                    <b>Requirements:</b>
+                    At least three courses must be entered for proper functioning of calculator.
+
+                    <b>Other features:</b>
+                    1. Click on <b>'Add Course'</b> to add a new row/course in course table.
+                    2. Click on <b>'Remove Course'</b> to remove a last row/course from the course table.
+                    3. Click on <b>'Reset Fields'</b> to reset every fields like Grade and credit to default value.
+                </pre>
+            </div>
             
             <script src="js/script.js"></script>
         </body>
