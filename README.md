@@ -2,12 +2,12 @@
 
 This project is a simple GPA calculator to calculate Grade Point Average (GPA).
 
-Web technologies used: HTML, css and javascript.
+Web technologies used: HTML5, CSS and JavaScript.
 
-View the live demo.
+Click the link in **About** section to use the GPA calculator.
 
 ## A sample screenshot of Project
-![Screesshot of GUI](https://github.com/Dev-Daljeet/GuessACard/blob/master/Screenshots/Screenshot%20of%20GUI.jpg?raw=true)
+![Screesshot of GUI](https://github.com/Dev-Daljeet/GPACalculatorWeb/blob/master/Screenshots/DefaultGUI.jpg?raw=true)
 
 ## Run
 
@@ -20,32 +20,33 @@ View the live demo.
 ## Usage example:
 ### Example 1: Calculate the GPA
 Calculate the GPA of three courses.  
-![Screenshot of Play 1a](https://github.com/Dev-Daljeet/GuessACard/blob/master/Screenshots/Screenshot%20of%20Play%201a.jpg?raw=true)
-![Screenshot of Play 1b](https://github.com/Dev-Daljeet/GuessACard/blob/master/Screenshots/Screenshot%20of%20Play%201b.jpg?raw=true)
 
-### Example 2: Use the buttons to add, remove and reset
+![Screenshot of Default](https://github.com/Dev-Daljeet/GPACalculatorWeb/blob/master/Screenshots/DefaultGUI.jpg?raw=true)
+![Screenshot of Calculate GPA](https://github.com/Dev-Daljeet/GPACalculatorWeb/blob/master/Screenshots/CalculateGPA.jpg?raw=true)
+
+### Example 2: Use the buttons to add course, remove course and reset fields
 Add new courses by clicking 'Add course' button.
 
-![Screenshot of Play 2](https://github.com/Dev-Daljeet/GuessACard/blob/master/Screenshots/Screesnhot%20of%20Play%202.jpg?raw=true)
+![Screenshot of Add Course](https://github.com/Dev-Daljeet/GPACalculatorWeb/blob/master/Screenshots/AddCourse.jpg?raw=true)
 
 Remove the last course by clicking 'Remove course' button.
 
-![Screesshot of GUI](https://github.com/Dev-Daljeet/GuessACard/blob/master/Screenshots/Screenshot%20of%20GUI.jpg?raw=true)
+![Screesshot of Remove course](https://github.com/Dev-Daljeet/GPACalculatorWeb/blob/master/Screenshots/RemoveCourse.jpg?raw=true)
 
 Reset the fields like credits and grade by clicking 'Reset fields' button.
 
-![Screesshot of GUI](https://github.com/Dev-Daljeet/GuessACard/blob/master/Screenshots/Screenshot%20of%20GUI.jpg?raw=true)
+![Screesshot of Reset Fields](https://github.com/Dev-Daljeet/GPACalculatorWeb/blob/master/Screenshots/ResetFields.jpg?raw=true)
 
 ### Example 3: Error messages 
 Error message for invalid credit.
 
-![Screesnhot of reset](https://github.com/Dev-Daljeet/GuessACard/blob/master/Screenshots/Screesnhot%20of%20reset.jpg?raw=true)
+![Screesnhot of Invalid Credit](https://github.com/Dev-Daljeet/GPACalculatorWeb/blob/master/Screenshots/CreditAlert.jpg?raw=true)
+![Screesnhot of Invalid Credit](https://github.com/Dev-Daljeet/GPACalculatorWeb/blob/master/Screenshots/CreditError.jpg?raw=true)
 
 Error message for invalid grade.
 
-
-![Screesshot of GUI](https://github.com/Dev-Daljeet/GuessACard/blob/master/Screenshots/Screenshot%20of%20GUI.jpg?raw=true)
-
+![Screesshot of Invalid Grade](https://github.com/Dev-Daljeet/GPACalculatorWeb/blob/master/Screenshots/GradeAlert.jpg?raw=true)
+![Screesshot of Invalid Grade](https://github.com/Dev-Daljeet/GPACalculatorWeb/blob/master/Screenshots/GradeError.jpg?raw=true)
 
 # License
 MIT License
